@@ -4,7 +4,6 @@ import { Image, StyleSheet, Text, View, Dimensions, TouchableOpacity } from 'rea
 import { Colors } from '../../Components/Colors'
 import ButtonCustom from '../../Components/ButtonCustom'
 
-
 const widthScreen = Dimensions.get('screen').width;
 const heightScreen = Dimensions.get('screen').height;
 
