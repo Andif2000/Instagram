@@ -9,5 +9,7 @@ export const Colors = {
     colorGray:'#808080',
     colorBrown:'#51143C',
     colorDark:'#8C8C8C',
-    colorBlue:'#3797EF'
+    colorBlue:'#3797EF',
+    colorGray2:'#e9e9e9',
+    colorWhite2:'#F5F5F5'
 }
