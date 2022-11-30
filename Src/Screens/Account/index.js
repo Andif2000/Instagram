@@ -54,17 +54,17 @@ const Account = () => {
                 </View>
                 <ButtonCustom
                     title='Log in'
-                    height={15}
-                    width={widthScreen - 70}
+                    height={13}
+                    width={widthScreen - 50}
                     backgroundColor={Colors.colorBlue}
-                    color='white' fontSize={20} />
+                    color='white' fontSize={18} />
                 <View
                     style={{
                         paddingTop: 25
                     }}>
                     <ButtonCustom
                         title='Switch Account'
-                        width={widthScreen - 70}
+                        width={widthScreen - 50}
                         color='#3797EF'
                         fontSize={15}
                         bold='bold' />
@@ -72,15 +72,20 @@ const Account = () => {
             </View>
             <View
                 style={{
+                    flex: 1,
                     justifyContent: 'center',
-                    top: heightScreen * 0.20,
                     borderTopWidth: 0.5,
-                    width: widthScreen
+                    borderTopColor: Colors.colorGray,
+                    width: widthScreen,
+                    position: 'absolute',
+                    bottom: 0,
+                    marginBottom:20
                 }}>
                 <Text
                     style={{
                         color: Colors.colorGray,
                         textAlign: 'center',
+                        fontSize:13,
                         marginTop: 20
                     }}>
                     <Text>Don't have an account? </Text>
@@ -88,9 +93,10 @@ const Account = () => {
                         <Text
                             style={{
                                 fontWeight: 'bold',
+                                color: Colors.colorBlue,
+                                fontSize:13,
                                 top: 2
-                            }}>
-                            Sign Up
+                            }}> Sign Up
                         </Text>
                     </TouchableOpacity>
                 </Text>
