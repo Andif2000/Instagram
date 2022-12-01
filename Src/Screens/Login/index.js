@@ -1,17 +1,21 @@
 import { View, Text, StyleSheet, SafeAreaView, ScrollView, Image, Dimensions, TouchableOpacity } from 'react-native'
-import React from 'react'
+import React, { useState } from 'react'
 
 import TopBar from '../../Components/TopBar'
 import { Colors } from '../../Components/Colors'
 import InputCustom from '../../Components/InputCustom'
 import ButtonCustom from '../../Components/ButtonCustom'
 import ContainerImage from '../../Components/ContainerImage'
+import InputLogin from '../../Components/InputLogin'
 
 
 const widthScreen = Dimensions.get('screen').width;
 const heightScreen = Dimensions.get('screen').height;
 
 const Login = () => {
+    const [username, setUsername] = useState('');
+    const [seePassword, setSeePassword] = useState(true)
+    const [password, setPassword] = useState('');
     return (
         <SafeAreaView
             style={styles.screen}>
@@ -36,14 +40,29 @@ const Login = () => {
                         placeholder='Usename'
                         width={widthScreen - 50}
                         height={10}
-                        radius={5} />
+                        radius={5}
+                        icon={require('../../Assets/Icons/iconUser.png')}
+                        onChangeText={setUsername} />
 
                     <InputCustom
+                        password
                         placeholder='Password'
                         width={widthScreen - 50}
                         height={10}
                         radius={5}
-                        marginTop={15} />
+                        marginTop={15}
+                        icon={require('../../Assets/Icons/iconLock.png')}
+                        value={password}
+                        onChangeText={setPassword}
+                        secureTextEntry={seePassword}
+                        setSeePassword={setSeePassword} />
+
+                    {/* <InputLogin
+                        password
+                        width={widthScreen - 50}
+                        placeholder='Password'
+                        icon={require('../../Assets/Icons/iconLock.png')}/> */}
+
                 </View>
 
                 <View
@@ -141,28 +160,28 @@ const Login = () => {
                     </View>
 
                 </View>
-            </ScrollView>
-            <View
-                style={{
-                    flex: 1,
-                    justifyContent: 'center',
-                    borderTopWidth: 0.5,
-                    borderTopColor: Colors.colorGray,
-                    width: widthScreen,
-                    position: 'absolute',
-                    bottom: 0,
-                    marginBottom:20
-                }}>
-                <Text
+                <View
                     style={{
-                        color: Colors.colorGray,
-                        textAlign: 'center',
-                        fontSize:13,
-                        marginTop: 20
+                        flex: 1,
+                        justifyContent: 'center',
+                        borderTopWidth: 0.5,
+                        borderTopColor: Colors.colorGray,
+                        width: widthScreen,
+                        marginTop: 180,
+                        marginBottom: 20,
+                        position: 'relative',
                     }}>
-                    <Text>Instagram OT Facebook</Text>
-                </Text>
-            </View>
+                    <Text
+                        style={{
+                            color: Colors.colorGray,
+                            textAlign: 'center',
+                            fontSize: 13,
+                            marginTop: 20
+                        }}>
+                        <Text>Instagram OT Facebook</Text>
+                    </Text>
+                </View>
+            </ScrollView>
         </SafeAreaView>
     )
 }
