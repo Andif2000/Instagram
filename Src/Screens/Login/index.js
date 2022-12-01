@@ -6,7 +6,6 @@ import { Colors } from '../../Components/Colors'
 import InputCustom from '../../Components/InputCustom'
 import ButtonCustom from '../../Components/ButtonCustom'
 import ContainerImage from '../../Components/ContainerImage'
-import InputLogin from '../../Components/InputLogin'
 
 
 const widthScreen = Dimensions.get('screen').width;
