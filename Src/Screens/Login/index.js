@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, SafeAreaView, ScrollView, Image, Dimensions, TouchableOpacity } from 'react-native'
+import { View, Text, StyleSheet, SafeAreaView, ScrollView, Image, Dimensions, TouchableOpacity, StatusBar } from 'react-native'
 import React, { useState } from 'react'
 
 import TopBar from '../../Components/TopBar'
@@ -18,6 +18,8 @@ const Login = () => {
     return (
         <SafeAreaView
             style={styles.screen}>
+            <StatusBar
+                style="auto" />
             <ScrollView>
                 <TopBar
                     onPress={() => { }} />
@@ -166,7 +168,7 @@ const Login = () => {
                         borderTopWidth: 0.5,
                         borderTopColor: Colors.colorGray,
                         width: widthScreen,
-                        marginTop: 180,
+                        marginTop: 150,
                         marginBottom: 20,
                         position: 'relative',
                     }}>
