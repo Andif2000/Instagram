@@ -1,5 +1,4 @@
-import { StatusBar } from 'expo-status-bar';
-import { Image, StyleSheet, Text, View, Dimensions, TouchableOpacity } from 'react-native';
+import { Image, StyleSheet, Text, View, Dimensions, TouchableOpacity, StatusBar } from 'react-native';
 
 import { Colors } from '../../Components/Colors'
 import ButtonCustom from '../../Components/ButtonCustom'
