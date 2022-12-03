@@ -1,11 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
 import { Image, StyleSheet, Text, View, Dimensions, TouchableOpacity } from 'react-native';
-import Account from './Src/Screens/Account';
-import Login from './Src/Screens/Login';
+import Home from './Src/Screens/Home';
 
 export default function App() {
   return (
-    <Login />
+    <Home />
   );
 }
 
