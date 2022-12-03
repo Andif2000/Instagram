@@ -57,13 +57,6 @@ const Login = () => {
                         onChangeText={setPassword}
                         secureTextEntry={seePassword}
                         setSeePassword={setSeePassword} />
-
-                    {/* <InputLogin
-                        password
-                        width={widthScreen - 50}
-                        placeholder='Password'
-                        icon={require('../../Assets/Icons/iconLock.png')}/> */}
-
                 </View>
 
                 <View
