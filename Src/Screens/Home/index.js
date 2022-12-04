@@ -22,7 +22,7 @@ const Home = () => {
                     <View>
                         <TouchableOpacity>
                             <ContainerImage
-                                source={require('../../Assets/Icons/Camera_Icon.png')}
+                                source={require('../../../assets/Icons/Camera_Icon.png')}
                                 width={31}
                                 height={31} />
                         </TouchableOpacity>
@@ -34,7 +34,7 @@ const Home = () => {
                             alignItems: 'center'
                         }}>
                         <Image
-                            source={require('../../Assets/Icons/Instagram_Logo.png')}
+                            source={require('../../../assets/Icons/Instagram_Logo.png')}
                             style={{
                                 width: 120,
                                 height: 35,
@@ -51,14 +51,14 @@ const Home = () => {
                                 marginRight: 15
                             }}>
                             <ContainerImage
-                                source={require('../../Assets/Icons/IGTV.png')}
+                                source={require('../../../assets/Icons/IGTV.png')}
                                 width={31}
                                 height={31} />
                         </TouchableOpacity>
 
                         <TouchableOpacity>
                             <ContainerImage
-                                source={require('../../Assets/Icons/Messanger.png')}
+                                source={require('../../../assets/Icons/Messanger.png')}
                                 width={31}
                                 height={31} />
                         </TouchableOpacity>
