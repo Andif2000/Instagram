@@ -21,7 +21,7 @@ const FlatListStory = () => {
                 <View
                     style={{ padding: 7 }}>
                     <Image
-                        source={require('../Assets/Images/ImagesStory/foto10.jpg')}
+                        source={require('../../../assets/Images/ImagesStory/foto10.jpg')}
                         style={styles.userImage} />
                     <Text style={[styles.userName, { textTransform: 'capitalize' }]}>Your Story</Text>
                 </View>
