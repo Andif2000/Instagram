@@ -21,7 +21,7 @@ const FlatListStory = () => {
                 <View
                     style={{ padding: 7 }}>
                     <Image
-                        source={require('../../../assets/Images/ImagesStory/foto10.jpg')}
+                        source={require('../../assets/Images/ImagesProfile/foto10.jpg')}
                         style={styles.userImage} />
                     <Text style={[styles.userName, { textTransform: 'capitalize' }]}>Your Story</Text>
                 </View>
@@ -48,7 +48,7 @@ const FlatListStory = () => {
                                 borderRadius: 50
                             }}>
                             <Image
-                                source={item.photo}
+                                source={item.profile}
                                 style={[styles.userImage, { borderWidth: 2 }]} />
                         </LinearGradient>
                         <Text style={[styles.userName, { textTransform: 'lowercase' }]}>{(item.name).substring(0,9)+'...'}</Text>
