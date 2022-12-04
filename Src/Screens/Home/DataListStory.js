@@ -2,7 +2,7 @@ export const dataStory = [
     {
         "id": "1",
         "name": "Keyla Putri",
-        "photo": require('../../../assets/Images/ImagesStory/foto1.jpg'),
+        "profile": require('../../../assets/Images/ImagesProfile/foto1.jpg'),
         "history": require('../../../assets/Images/ImagesHistory/foto1.jpg'),
         "post": require('../../../assets/Images/ImagesPost/foto1.jpg')
     },
