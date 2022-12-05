@@ -1,6 +1,6 @@
 import { View, Text, ScrollView, TouchableOpacity, Image } from 'react-native'
 import React from 'react'
-import { dataList } from './DataList'
+import { dataStory } from './DataStory'
 import Entypo from 'react-native-vector-icons/Entypo'
 import { useNavigation } from '@react-navigation/native'
 
@@ -14,7 +14,7 @@ const Story = () => {
         paddingVertical: 10
       }}>
       {
-        dataList.map((data, index) => {
+        dataStory.map((data, index) => {
           return (
             <TouchableOpacity
               key={index}
