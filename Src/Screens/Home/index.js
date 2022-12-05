@@ -2,6 +2,7 @@ import { View, Text, SafeAreaView, StatusBar, StyleSheet, TouchableOpacity, Imag
 import React from 'react'
 import ContainerImage from '../../Components/ContainerImage'
 import Stories from '../../Components/Stories'
+import Posts from '../../Components/Posts'
 
 const Home = () => {
     return (
@@ -69,6 +70,7 @@ const Home = () => {
             </View>
             <ScrollView>
                 <Stories />
+                <Posts />
             </ScrollView>
         </View>
     )
