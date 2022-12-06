@@ -1,4 +1,4 @@
-import { View, Text, Image, TouchableOpacity, TextInput } from 'react-native'
+import { View, Text, Image, TouchableOpacity, TextInput, Button } from 'react-native'
 import React, { useState } from 'react'
 import Feather from 'react-native-vector-icons/Feather'
 import AntDesign from 'react-native-vector-icons/AntDesign'
@@ -119,19 +119,31 @@ const Posts = () => {
                                     Liked by {like ? 'You and' : ''}{' '}
                                     {like ? data.like + 1 : data.like} others
                                 </Text>
-                                <Text
-                                    style={{
-                                        fontWeight: '500',
-                                        fontSize: 14,
-                                        paddingVertical: 2
-                                    }}>
-                                    {caption.length < 90 ? caption :
-                                    <>
-                                        <Text>{caption.substring(0, 90)}</Text>
-                                    </>
-                                    }
-                                    
-                                </Text>
+                                {caption.length < 90 ?
+                                    <Text
+                                        style={{
+                                            fontWeight: '500',
+                                            fontSize: 14,
+                                            paddingVertical: 2
+                                        }}>
+                                        {caption}
+                                    </Text> :
+                                    <TouchableOpacity
+                                        style={{
+                                            fontWeight: '500',
+                                            fontSize: 14,
+                                            paddingVertical: 2
+                                        }}>
+                                        <Text>
+                                            {caption.substring(0, 90)}
+                                            <Text
+                                                style={{
+                                                    color: Colors.colorGray
+                                                }}>...more</Text>
+                                        </Text>
+
+                                    </TouchableOpacity>
+                                }
                                 <TouchableOpacity>
                                     <Text
                                         style={{
@@ -199,6 +211,9 @@ const Posts = () => {
                                         </TouchableOpacity>
                                     </View>
                                 </View>
+                                    <Text style={{paddingTop:3, fontSize:11}}>
+                                        {data.time}
+                                    </Text>
                             </View>
                         </View>
                     );
