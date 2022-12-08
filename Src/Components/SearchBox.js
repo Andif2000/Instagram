@@ -33,7 +33,7 @@ const SearchBox = () => {
                     fontSize: 15,
                     padding: 4,
                     paddingLeft:40
-                }} />
+                }}/>
         </View>
     )
 }
