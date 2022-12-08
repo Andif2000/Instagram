@@ -10,4 +10,25 @@ export const DataSearch = [
             require('../../assets/Images/ImagesStory/foto3.jpg'),
         ]
     },
+    {
+        id:1,
+        images:[
+            require('../../assets/Images/ImagesPosts/foto4.jpg'),
+            require('../../assets/Images/ImagesPosts/foto5.jpg'),
+            require('../../assets/Images/ImagesStory/foto4.jpg'),
+            require('../../assets/Images/ImagesStory/foto5.jpg'),
+            require('../../assets/Images/ImagesPosts/foto6.jpg'),
+        ]
+    },
+    {
+        id:2,
+        images:[
+            require('../../assets/Images/ImagesPosts/foto7.jpg'),
+            require('../../assets/Images/ImagesPosts/foto8.jpg'),
+            require('../../assets/Images/ImagesStory/foto7.jpeg'),
+            require('../../assets/Images/ImagesStory/foto8.png'),
+            require('../../assets/Images/ImagesPosts/foto9.jpg'),
+            require('../../assets/Images/ImagesStory/foto9.jpg'),
+        ]
+    },
 ]
