@@ -2,13 +2,13 @@ import { View, Text, TouchableOpacity, Image } from 'react-native'
 import React from 'react'
 import { DataSearch } from './DataSearch'
 
-const SearchContent = () => {
+const SearchContent = (props) => {
     return (
         <View>
             {
                 DataSearch.map((data, index) => {
                     return (
-                        <>
+                        <View key={index}>
                             {data.id === 0 ?
                                 <View
                                     key={index}
@@ -21,9 +21,9 @@ const SearchContent = () => {
                                         return (
                                             <TouchableOpacity
                                                 key={imgIndex}
-                                                style={{
-                                                    paddingBottom: 2
-                                                }}>
+                                                onPressIn={() => { props.data(imageData) }}
+                                                onPressOut={() => { props.data(null) }}
+                                                style={{ paddingBottom: 2 }}>
                                                 <Image
                                                     source={imageData}
                                                     style={{
@@ -38,10 +38,10 @@ const SearchContent = () => {
                                 :
                                 null
                             }
-
+                            
                             {data.id === 1 ?
                                 <View
-                                    key={index + data.id}
+                                    key={index}
                                     style={{
                                         flexDirection: 'row',
                                         justifyContent: 'space-between'
@@ -56,6 +56,8 @@ const SearchContent = () => {
                                             return (
                                                 <TouchableOpacity
                                                     key={imgIndex}
+                                                    onPressIn={() => { props.data(imageData) }}
+                                                    onPressOut={() => { props.data(null) }}
                                                     style={{ paddingBottom: 2 }}>
                                                     <Image
                                                         source={imageData}
@@ -68,6 +70,8 @@ const SearchContent = () => {
                                         })}
                                     </View>
                                     <TouchableOpacity
+                                        onPressIn={() => { props.data(data.images[4]) }}
+                                        onPressOut={() => { props.data(null) }}
                                         style={{ marginLeft: 2 }}>
                                         <Image
                                             source={data.images[4]}
@@ -83,11 +87,14 @@ const SearchContent = () => {
 
                             {data.id === 2 ? (
                                 <View
+                                key={index}
                                     style={{
                                         flexDirection: 'row',
                                         justifyContent: 'space-between'
                                     }}>
                                     <TouchableOpacity
+                                        onPressIn={() => { props.data(data.images[2]) }}
+                                        onPressOut={() => { props.data(null) }}
                                         style={{ paddingRight: 2 }}>
                                         <Image
                                             source={data.images[2]}
@@ -106,6 +113,9 @@ const SearchContent = () => {
                                         {data.images.slice(0, 2).map((imageData, imgIndex) => {
                                             return (
                                                 <TouchableOpacity
+                                                    onPressIn={() => { props.data(imageData) }}
+                                                    onPressOut={() => { props.data(null) }}
+                                                    key={imgIndex}
                                                     style={{ paddingBottom: 2 }}>
                                                     <Image
                                                         source={imageData}
@@ -120,8 +130,8 @@ const SearchContent = () => {
                                 </View>
                             ) :
                                 null
-                            }
-                        </>
+                            } 
+                        </View>
                     );
                 })
             }
