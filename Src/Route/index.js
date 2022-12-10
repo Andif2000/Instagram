@@ -18,6 +18,7 @@ const Route = () => {
         return (
             <Tab.Navigator
                 screenOptions={({ route }) => ({
+                    tabBarHideOnKeyboard: true,
                     tabBarShowLabel: false,
                     headerShown: false,
                     tabBarStyle: {
