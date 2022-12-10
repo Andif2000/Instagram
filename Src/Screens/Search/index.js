@@ -35,11 +35,7 @@ const Search = () => {
             margin: 25
           }}>
           <AntDesign
-            name='pluscircleo'
-            style={{
-              fontSize: 40,
-              opacity: 0.5
-            }} />
+            name='pluscircleo' style={{ fontSize: 40, opacity: 0.5 }} />
         </TouchableOpacity>
       </ScrollView>
       {
