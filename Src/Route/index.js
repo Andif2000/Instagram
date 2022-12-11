@@ -33,7 +33,7 @@ const Route = () => {
                             iconName = focused ? "search" : "ios-search-outline";
                             size = focused ? size + 8 : size + 2;
                         } else if (route.name === "Reels") {
-                            iconName = focused ? "add-circle" : "add-circle-outline";
+                            iconName = focused ? "play-circle" : "play-circle-outline";
                             size = focused ? size + 8 : size + 2;
                         } else if (route.name === "Activity") {
                             iconName = focused ? "ios-heart" : "ios-heart-outline";
