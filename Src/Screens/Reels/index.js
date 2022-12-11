@@ -3,7 +3,6 @@ import React, { useRef } from 'react'
 import Feather from 'react-native-vector-icons/Feather'
 import { Colors } from '../../Components/Colors';
 import ReelsComponent from '../../Components/ReelsComponent';
-import {Video} from 'expo-av'
 
 const Reels = () => {
   const widthWindow = Dimensions.get('window').width;
