@@ -34,7 +34,6 @@ const Reels = () => {
         </TouchableOpacity>
       </View>
       <ReelsComponent />
-     
     </View>
   )
 }
