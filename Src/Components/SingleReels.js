@@ -44,7 +44,7 @@ const SingleReels = ({ item, index, currentIndex }) => {
                     resizeMode="cover"
                     isLooping
                     shouldPlay
-                    isMuted={currentIndex == index ? false : true}
+                    isMuted={currentIndex == index ? mute : true}
                     rate={1.0}
                     
                 />
@@ -60,7 +60,7 @@ const SingleReels = ({ item, index, currentIndex }) => {
                     backgroundColor: 'rgba(52,52,52,0.8)',
                     borderRadius: 100,
                     padding: 15,
-                    opacity: mute ? 0.9 : 0
+                    opacity: mute ? 0.9 : 0.9
                 }} />
             <View
                 style={{
