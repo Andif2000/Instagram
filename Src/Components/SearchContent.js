@@ -1,12 +1,12 @@
 import { View, Text, TouchableOpacity, Image } from 'react-native'
 import React from 'react'
-import { DataSearch } from './DataSearch'
+import { dataSearch } from './DataBase'
 
 const SearchContent = (props) => {
     return (
         <View>
             {
-                DataSearch.map((data, index) => {
+                dataSearch.map((data, index) => {
                     return (
                         <View key={index}>
                             {data.id === 0 ?
