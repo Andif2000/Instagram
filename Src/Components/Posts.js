@@ -5,7 +5,7 @@ import AntDesign from 'react-native-vector-icons/AntDesign'
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import Entypo from 'react-native-vector-icons/Entypo'
 
-import { dataPosts } from './DataPosts'
+import { dataPosts } from './DataBase'
 import { Colors } from './Colors'
 
 const Posts = () => {
