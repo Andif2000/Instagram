@@ -1,7 +1,7 @@
 import { View, Text } from 'react-native'
 import React, { useState } from 'react'
 import { SwiperFlatList } from 'react-native-swiper-flatlist';
-import { videoData } from './DataReels';
+import { dataVideo } from './DataBase';
 
 import SingleReels from './SingleReels';
 
@@ -13,7 +13,7 @@ const ReelsComponent = () => {
 
   return (
     <SwiperFlatList
-      data={videoData}
+      data={dataVideo}
       onChangeIndex={handlechangeIndexValue}
       vertical={true}
       renderItem={({ item, index }) => (
