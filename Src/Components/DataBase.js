@@ -287,7 +287,7 @@ export const dataFriendsProfile = [
         accountName: 'Molinaae',
         profileImage: require('../../assets/Images/ImagesProfile/foto5.jpg'),
         post: 24,
-        folloewrs: 649,
+        followers: 649,
         following: 399,
         follow: false
     },
@@ -296,7 +296,7 @@ export const dataFriendsProfile = [
         accountName: 'Whiican',
         profileImage: require('../../assets/Images/ImagesProfile/foto3.jpg'),
         post: 241,
-        folloewrs: 2514,
+        followers: 2514,
         following: 1002,
         follow: false
     },
@@ -305,7 +305,7 @@ export const dataFriendsProfile = [
         accountName: 'Feby_Chan',
         profileImage: require('../../assets/Images/ImagesProfile/foto7.jpg'),
         post: 54,
-        folloewrs: 3423,
+        followers: 3423,
         following: 3332,
         follow: false
     },
@@ -314,16 +314,16 @@ export const dataFriendsProfile = [
         accountName: 'Mrkonh',
         profileImage: require('../../assets/Images/ImagesProfile/foto9.jpg'),
         post: 53,
-        folloewrs: 1025,
+        followers: 1025,
         following: 987,
         follow: false
     },
     {
         name: 'Wildayanti',
         accountName: 'Wil_thy',
-        profileImage: require('../../assets/Images/ImagesProfile/foto2.jpg'),
+        profileImage: require('../../assets/Images/ImagesProfile/foto10.jpg'),
         post: 24,
-        folloewrs: 649,
+        followers: 649,
         following: 399,
         follow: false
     },
@@ -332,16 +332,61 @@ export const dataFriendsProfile = [
         accountName: 'Fik_MA',
         profileImage: require('../../assets/Images/ImagesProfile/foto2.jpg'),
         post: 78,
-        folloewrs: 2011,
+        followers: 2011,
         following: 1029,
         follow: false
     },
     {
-        name: 'Mujahidah Husnaeni',
+        name: 'Mujahidah',
         accountName: 'Iddah_En',
         profileImage: require('../../assets/Images/ImagesProfile/foto8.jpg'),
         post: 75,
-        folloewrs: 3323,
+        followers: 3323,
+        following: 2112,
+        follow: false
+    },
+    {
+        name: 'Nur Intan',
+        accountName: 'Intan_Nr',
+        profileImage: require('../../assets/Images/ImagesProfile/foto5.jpg'),
+        post: 75,
+        followers: 3323,
+        following: 2112,
+        follow: false
+    },
+    {
+        name: 'Muh Habibi',
+        accountName: 'Habibi',
+        profileImage: require('../../assets/Images/ImagesPosts/foto1.jpg'),
+        post: 75,
+        followers: 3323,
+        following: 2112,
+        follow: false
+    },
+    {
+        name: 'Bilqis Humaerah',
+        accountName: 'BilQizz',
+        profileImage: require('../../assets/Images/ImagesPosts/foto2.jpg'),
+        post: 75,
+        followers: 3323,
+        following: 2112,
+        follow: false
+    },
+    {
+        name: 'Wanda Sahirah',
+        accountName: 'Sahirah',
+        profileImage: require('../../assets/Images/ImagesPosts/foto3.jpg'),
+        post: 75,
+        followers: 3323,
+        following: 2112,
+        follow: false
+    },
+    {
+        name: 'Aulia Dewi',
+        accountName: 'Aul_wi',
+        profileImage: require('../../assets/Images/ImagesPosts/foto4.jpg'),
+        post: 75,
+        followers: 3323,
         following: 2112,
         follow: false
     },
