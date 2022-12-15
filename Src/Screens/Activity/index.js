@@ -1,10 +1,12 @@
 import { View, Text, ScrollView, TouchableOpacity, Image } from 'react-native'
 import React, { useState } from 'react'
+import { useNavigation } from '@react-navigation/native'
 import AntDesign from 'react-native-vector-icons/AntDesign'
 
 import { dataFriendsProfile } from '../../Components/DataBase'
 
 const Activity = () => {
+  const navigation = useNavigation();
   return (
     <View
       style={{
@@ -32,7 +34,18 @@ const Activity = () => {
           {
             dataFriendsProfile.slice(0, 3).map((data, index) => {
               return (
-                <TouchableOpacity key={index}>
+                <TouchableOpacity
+                  key={index}
+                  onPress={() => navigation.push("FriendProfile",
+                    {
+                      name: data.name,
+                      profileImage: data.profileImage,
+                      follow: data.follow,
+                      post: data.post,
+                      following: data.following,
+                      followers: data.followers
+                    })
+                  }>
                   <Text>{data.name}, </Text>
                 </TouchableOpacity>
               )
@@ -122,7 +135,7 @@ const Activity = () => {
                             style={{
                               flexDirection: 'row',
                               alignItems: 'center',
-                              minWidth: '64%'
+                              maxWidth: '64%'
                             }}>
                             <Image
                               source={data.profileImage}
@@ -202,6 +215,11 @@ const Activity = () => {
             )
           })
         }
+        <TouchableOpacity style={{ padding: 20 }}>
+          <Text style={{ color: '#3493d9' }}>
+            See all suggestion
+          </Text>
+        </TouchableOpacity>
       </ScrollView>
     </View>
   )
