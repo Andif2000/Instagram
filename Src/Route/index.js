@@ -10,6 +10,7 @@ import Reels from '../Screens/Reels';
 import Activity from '../Screens/Activity';
 import Profile from '../Screens/Profile';
 import Status from '../Components/Status';
+import FriendProfile from '../Components/FriendProfile';
 
 const Route = () => {
     const Stack = createNativeStackNavigator();
@@ -65,6 +66,7 @@ const Route = () => {
                 }>
                 <Stack.Screen name='Bottom' component={ButtomTabScreens} />
                 <Stack.Screen name='Status' component={Status} />
+                <Stack.Screen name='FriendProfile' component={FriendProfile} />
             </Stack.Navigator>
         </NavigationContainer>
     );
