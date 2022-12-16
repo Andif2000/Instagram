@@ -7,42 +7,77 @@ export const ProfileBody = ({
 }) => {
     return (
         <View>
-            {accountName ? null :
-                (
-                    <View
+            {accountName ? (<View>
+                <View
+                    style={{
+                        flexDirection: 'row',
+                        alignItems: 'center',
+                        justifyContent: 'space-between'
+                    }}>
+                    <TouchableOpacity
                         style={{
-                            alignItems: 'center',
-                            justifyContent: 'space-around',
                             flexDirection: 'row',
-                            paddingVertical: 20
+                            alignItems: 'center',
                         }}>
-                        <View style={{ alignItems: 'center' }}>
-                            <Image
-                                source={profileImage}
-                                style={{
-                                    resizeMode: 'cover',
-                                    width: 80,
-                                    height: 80,
-                                    borderRadius: 100
-                                }} />
-                            <Text style={{ paddingVertical: 5, fontWeight: 'bold' }}>{name}</Text>
-                        </View>
-                        <View style={{ alignItems: 'center' }}>
-                            <Text style={{ fontSize: 18, fontWeight: 'bold' }}>{post}</Text>
-                            <Text>Posts</Text>
-                        </View>
-                        <TouchableOpacity style={{ alignItems: 'center' }}>
-                            <Text style={{ fontSize: 18, fontWeight: 'bold' }}>{following}</Text>
-                            <Text>following</Text>
+                        <Text style={{ fontSize: 18, fontWeight: 'bold' }}>{accountName}</Text>
+                        <Feather name='chevron-down'
+                            style={{
+                                fontSize: 20,
+                                color: '#000000',
+                                paddingHorizontal: 5,
+                                opacity: 0.5
+                            }} />
+                    </TouchableOpacity>
+                    <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                        <TouchableOpacity>
+                            <Feather name='plus-square'
+                                style={{ fontSize: 25, color: '#000000', paddingHorizontal: 15 }}
+                            />
                         </TouchableOpacity>
-                        <TouchableOpacity style={{ alignItems: 'center' }}>
-                            <Text style={{ fontSize: 18, fontWeight: 'bold' }}>{followers}</Text>
-                            <Text>followers</Text>
+                        <TouchableOpacity>
+                            <Feather name='menu'
+                                style={{ fontSize: 25, color: '#000000', }}
+                            />
                         </TouchableOpacity>
                     </View>
-                )
+                </View>
+            </View>
+            ) : null}
 
-            }
+            <View
+                style={{
+                    alignItems: 'center',
+                    justifyContent: 'space-around',
+                    flexDirection: 'row',
+                    paddingVertical: 20
+                }}>
+                <View style={{ alignItems: 'center' }}>
+                    <Image
+                        source={profileImage}
+                        style={{
+                            resizeMode: 'cover',
+                            width: 80,
+                            height: 80,
+                            borderRadius: 100
+                        }} />
+                    <Text style={{ paddingVertical: 5, fontWeight: 'bold' }}>{name}</Text>
+                </View>
+                <View style={{ alignItems: 'center' }}>
+                    <Text style={{ fontSize: 18, fontWeight: 'bold' }}>{post}</Text>
+                    <Text>Posts</Text>
+                </View>
+                <TouchableOpacity style={{ alignItems: 'center' }}>
+                    <Text style={{ fontSize: 18, fontWeight: 'bold' }}>{followers}</Text>
+                    <Text>followers</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={{ alignItems: 'center' }}>
+                    <Text style={{ fontSize: 18, fontWeight: 'bold' }}>{following}</Text>
+                    <Text>following</Text>
+                </TouchableOpacity>
+            </View>
+
+
+
         </View>
     )
 }
@@ -51,37 +86,86 @@ export const ProfileButtons = ({ id }) => {
     const [follow, setFollow] = useState(follow);
     return (
         <>
-            {id === 0 ? null : (
-                <View
+            {id === 0 ?
+                (<View
                     style={{
-                        width: '100%',
                         flexDirection: 'row',
+                        width: '100%',
+                        alignItems: 'center',
                         justifyContent: 'space-evenly',
-                        alignItems: 'center'
+                        paddingVertical: 5
                     }}>
                     <TouchableOpacity
-                        onPress={() => { setFollow(!follow) }}
-                        style={{ width: '42%' }}>
+                        style={{
+                            width: '100%'
+
+                        }}>
                         <View
                             style={{
                                 width: '100%',
                                 height: 35,
-                                backgroundColor: follow ? null : '#3493d9',
                                 borderRadius: 5,
-                                borderWidth: follow ? 1 : 0,
                                 borderColor: '#dedede',
+                                borderWidth: 1,
                                 justifyContent: 'center',
                                 alignItems: 'center'
                             }}>
-                            <Text style={{ color: follow ? '#000000' : '#ffffff' }}>
-                                {follow ? 'Following' : 'follow'}
-                            </Text>
+                            <Text
+                            style={{
+                                fontSize:14,
+                                fontWeight:'bold',
+                                letterSpacing:1,
+                                opacity:0.8
+                            }}>Edit Profile</Text>
                         </View>
                     </TouchableOpacity>
-                    <TouchableOpacity style={{ width: '42%' }}>
-                        <View
+                </View>) : (
+                    <View
+                        style={{
+                            width: '100%',
+                            flexDirection: 'row',
+                            justifyContent: 'space-evenly',
+                            alignItems: 'center'
+                        }}>
+                        <TouchableOpacity
+                            onPress={() => { setFollow(!follow) }}
+                            style={{ width: '42%' }}>
+                            <View
+                                style={{
+                                    width: '100%',
+                                    height: 35,
+                                    backgroundColor: follow ? null : '#3493d9',
+                                    borderRadius: 5,
+                                    borderWidth: follow ? 1 : 0,
+                                    borderColor: '#dedede',
+                                    justifyContent: 'center',
+                                    alignItems: 'center'
+                                }}>
+                                <Text style={{ color: follow ? '#000000' : '#ffffff' }}>
+                                    {follow ? 'Following' : 'follow'}
+                                </Text>
+                            </View>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={{ width: '42%' }}>
+                            <View
+                                style={{
+                                    width: '100%',
+                                    height: 35,
+                                    backgroundColor: '#ffffff',
+                                    borderRadius: 5,
+                                    borderWidth: 1,
+                                    borderColor: '#dedede',
+                                    justifyContent: 'center',
+                                    alignItems: 'center'
+                                }}>
+                                <Text style={{ color: '#000000' }}>
+                                    Messege
+                                </Text>
+                            </View>
+                        </TouchableOpacity>
+                        <TouchableOpacity
                             style={{
-                                width: '100%',
+                                width: '10%',
                                 height: 35,
                                 backgroundColor: '#ffffff',
                                 borderRadius: 5,
@@ -90,26 +174,10 @@ export const ProfileButtons = ({ id }) => {
                                 justifyContent: 'center',
                                 alignItems: 'center'
                             }}>
-                            <Text style={{ color: '#000000' }}>
-                                Messege
-                            </Text>
-                        </View>
-                    </TouchableOpacity>
-                    <TouchableOpacity
-                        style={{
-                            width: '10%',
-                            height: 35,
-                            backgroundColor: '#ffffff',
-                            borderRadius: 5,
-                            borderWidth: 1,
-                            borderColor: '#dedede',
-                            justifyContent: 'center',
-                            alignItems: 'center'
-                        }}>
-                        <Feather name='chevron-down' style={{ fontSize: 20, color: '#000000' }} />
-                    </TouchableOpacity>
-                </View>
-            )
+                            <Feather name='chevron-down' style={{ fontSize: 20, color: '#000000' }} />
+                        </TouchableOpacity>
+                    </View>
+                )
 
             }
         </>
