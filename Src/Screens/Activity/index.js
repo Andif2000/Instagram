@@ -217,7 +217,7 @@ const Activity = () => {
         }
         <TouchableOpacity style={{ padding: 20 }}>
           <Text style={{ color: '#3493d9' }}>
-            See all suggestion
+            See all suggestions
           </Text>
         </TouchableOpacity>
       </ScrollView>
