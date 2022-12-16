@@ -1,5 +1,6 @@
-import { View, Text, Image } from 'react-native'
-import React from 'react'
+import { View, Text, Image, TouchableOpacity } from 'react-native'
+import React, { useState } from 'react'
+import Feather from 'react-native-vector-icons/Feather'
 
 export const ProfileBody = ({
     name, accountName, profileImage, post, followers, following
@@ -30,14 +31,14 @@ export const ProfileBody = ({
                             <Text style={{ fontSize: 18, fontWeight: 'bold' }}>{post}</Text>
                             <Text>Posts</Text>
                         </View>
-                        <View style={{ alignItems: 'center' }}>
+                        <TouchableOpacity style={{ alignItems: 'center' }}>
                             <Text style={{ fontSize: 18, fontWeight: 'bold' }}>{following}</Text>
                             <Text>following</Text>
-                        </View>
-                        <View style={{ alignItems: 'center' }}>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={{ alignItems: 'center' }}>
                             <Text style={{ fontSize: 18, fontWeight: 'bold' }}>{followers}</Text>
                             <Text>followers</Text>
-                        </View>
+                        </TouchableOpacity>
                     </View>
                 )
 
@@ -46,4 +47,71 @@ export const ProfileBody = ({
     )
 }
 
-export default ProfileBody
+export const ProfileButtons = ({ id }) => {
+    const [follow, setFollow] = useState(follow);
+    return (
+        <>
+            {id === 0 ? null : (
+                <View
+                    style={{
+                        width: '100%',
+                        flexDirection: 'row',
+                        justifyContent: 'space-evenly',
+                        alignItems: 'center'
+                    }}>
+                    <TouchableOpacity
+                        onPress={() => { setFollow(!follow) }}
+                        style={{ width: '42%' }}>
+                        <View
+                            style={{
+                                width: '100%',
+                                height: 35,
+                                backgroundColor: follow ? null : '#3493d9',
+                                borderRadius: 5,
+                                borderWidth: follow ? 1 : 0,
+                                borderColor: '#dedede',
+                                justifyContent: 'center',
+                                alignItems: 'center'
+                            }}>
+                            <Text style={{ color: follow ? '#000000' : '#ffffff' }}>
+                                {follow ? 'Following' : 'follow'}
+                            </Text>
+                        </View>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={{ width: '42%' }}>
+                        <View
+                            style={{
+                                width: '100%',
+                                height: 35,
+                                backgroundColor: '#ffffff',
+                                borderRadius: 5,
+                                borderWidth: 1,
+                                borderColor: '#dedede',
+                                justifyContent: 'center',
+                                alignItems: 'center'
+                            }}>
+                            <Text style={{ color: '#000000' }}>
+                                Messege
+                            </Text>
+                        </View>
+                    </TouchableOpacity>
+                    <TouchableOpacity
+                        style={{
+                            width: '10%',
+                            height: 35,
+                            backgroundColor: '#ffffff',
+                            borderRadius: 5,
+                            borderWidth: 1,
+                            borderColor: '#dedede',
+                            justifyContent: 'center',
+                            alignItems: 'center'
+                        }}>
+                        <Feather name='chevron-down' style={{ fontSize: 20, color: '#000000' }} />
+                    </TouchableOpacity>
+                </View>
+            )
+
+            }
+        </>
+    )
+}
