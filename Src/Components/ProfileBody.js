@@ -1,6 +1,7 @@
 import { View, Text, Image, TouchableOpacity } from 'react-native'
 import React, { useState } from 'react'
 import Feather from 'react-native-vector-icons/Feather'
+import { useNavigation } from '@react-navigation/native'
 
 export const ProfileBody = ({
     name, accountName, profileImage, post, followers, following
@@ -82,8 +83,9 @@ export const ProfileBody = ({
     )
 }
 
-export const ProfileButtons = ({ id }) => {
+export const ProfileButtons = ({ id, name, accountName, profileImage }) => {
     const [follow, setFollow] = useState(follow);
+    const navigation = useNavigation();
     return (
         <>
             {id === 0 ?
@@ -96,6 +98,14 @@ export const ProfileButtons = ({ id }) => {
                         paddingVertical: 5
                     }}>
                     <TouchableOpacity
+                        onPress={() => {
+                            navigation.push('EditProfile',
+                                {
+                                    name: name,
+                                    accountName: accountName,
+                                    profileImage: profileImage
+                                })
+                        }}
                         style={{
                             width: '100%'
 
@@ -111,12 +121,12 @@ export const ProfileButtons = ({ id }) => {
                                 alignItems: 'center'
                             }}>
                             <Text
-                            style={{
-                                fontSize:14,
-                                fontWeight:'bold',
-                                letterSpacing:1,
-                                opacity:0.8
-                            }}>Edit Profile</Text>
+                                style={{
+                                    fontSize: 14,
+                                    fontWeight: 'bold',
+                                    letterSpacing: 1,
+                                    opacity: 0.8
+                                }}>Edit Profile</Text>
                         </View>
                     </TouchableOpacity>
                 </View>) : (
