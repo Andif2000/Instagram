@@ -2,6 +2,7 @@ import { View, Text, ScrollView, TouchableOpacity } from 'react-native'
 import React from 'react'
 import { ProfileBody, ProfileButtons } from '../../Components/ProfileBody'
 import Entypo from 'react-native-vector-icons/Entypo'
+import BottomTabView from '../../Components/BottomTabView'
 
 const Profile = () => {
   const circuls = [];
@@ -76,6 +77,9 @@ const Profile = () => {
           {circuls}
         </ScrollView>
       </View>
+      <BottomTabView>
+
+      </BottomTabView>
     </View>
   )
 }
