@@ -77,9 +77,7 @@ const Profile = () => {
           {circuls}
         </ScrollView>
       </View>
-      <BottomTabView>
-
-      </BottomTabView>
+      <BottomTabView />
     </View>
   )
 }
