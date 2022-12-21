@@ -4,6 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Ionic from 'react-native-vector-icons/Ionicons'
+import Feather from 'react-native-vector-icons/Feather'
 import Home from '../Screens/Home';
 import Search from '../Screens/Search';
 import Reels from '../Screens/Reels';
@@ -12,6 +13,7 @@ import Profile from '../Screens/Profile';
 import Status from '../Components/Status';
 import FriendProfile from '../Components/FriendProfile';
 import EditProfile from '../Components/EditProfile';
+import ContainerImage from '../Components/ContainerImage';
 
 const Route = () => {
     const Stack = createNativeStackNavigator();
@@ -35,8 +37,7 @@ const Route = () => {
                             iconName = focused ? "search" : "ios-search-outline";
                             size = focused ? size + 8 : size + 2;
                         } else if (route.name === "Reels") {
-                            iconName = focused ? "play-circle" : "play-circle-outline";
-                            size = focused ? size + 8 : size + 2;
+
                         } else if (route.name === "Activity") {
                             iconName = focused ? "ios-heart" : "ios-heart-outline";
                             size = focused ? size + 8 : size + 2;
@@ -44,8 +45,12 @@ const Route = () => {
                             iconName = focused ? "ios-person-circle" : "ios-person-circle-outline";
                             size = focused ? size + 8 : size + 2;
                         }
+                        if (route.name == "Reels") {
+                            return <Feather name='tv' size={focused ? size + 6 : size + 2} color={colour} />
 
-                        return <Ionic name={iconName} size={size} color={colour} />
+                        } else {
+                            return <Ionic name={iconName} size={size} color={colour} />
+                        }
 
                     }
                 })}
