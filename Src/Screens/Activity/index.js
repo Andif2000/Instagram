@@ -68,6 +68,15 @@ const Activity = () => {
                     width: '100%'
                   }}>
                   <TouchableOpacity
+                    onPress={() => navigation.push("FriendProfile",
+                      {
+                        name: data.name,
+                        profileImage: data.profileImage,
+                        follow: data.follow,
+                        post: data.post,
+                        following: data.following,
+                        followers: data.followers
+                      })}
                     style={{
                       flexDirection: 'row',
                       justifyContent: 'space-between',
@@ -132,6 +141,15 @@ const Activity = () => {
                         }}>
                         <View>
                           <TouchableOpacity
+                            onPress={() => navigation.push("FriendProfile",
+                              {
+                                name: data.name,
+                                profileImage: data.profileImage,
+                                follow: data.follow,
+                                post: data.post,
+                                following: data.following,
+                                followers: data.followers
+                              })}
                             style={{
                               flexDirection: 'row',
                               alignItems: 'center',
