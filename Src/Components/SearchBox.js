@@ -1,4 +1,4 @@
-import { View, Text, TextInput } from 'react-native'
+import { View, TextInput } from 'react-native'
 import React from 'react'
 import Ionicons from 'react-native-vector-icons/Ionicons'
 
@@ -32,8 +32,8 @@ const SearchBox = () => {
                     justifyContent: 'center',
                     fontSize: 15,
                     padding: 4,
-                    paddingLeft:40
-                }}/>
+                    paddingLeft: 40
+                }} />
         </View>
     )
 }
