@@ -3,7 +3,6 @@ import React from 'react'
 import { Colors } from './Colors'
 import ContainerImage from './ContainerImage'
 
-
 const TopBar = (props) => {
     if (props.center) {
         return (
