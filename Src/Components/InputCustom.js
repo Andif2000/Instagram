@@ -2,7 +2,6 @@ import { View, Text, TextInput, Platform, Dimensions, Image, TouchableOpacity } 
 import React from 'react'
 import { Colors } from './Colors'
 
-
 const InputCustom = (props) => {
     return (
         <View
