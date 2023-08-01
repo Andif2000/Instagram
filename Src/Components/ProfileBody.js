@@ -77,8 +77,6 @@ export const ProfileBody = ({
                 </TouchableOpacity>
             </View>
 
-
-
         </View>
     )
 }
