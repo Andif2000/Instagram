@@ -7,78 +7,98 @@ export const ProfileBody = ({
     name, accountName, profileImage, post, followers, following
 }) => {
     return (
-        <View>
-            {accountName ? (<View>
-                <View
-                    style={{
-                        flexDirection: 'row',
-                        alignItems: 'center',
-                        justifyContent: 'space-between'
-                    }}>
-                    <TouchableOpacity
-                        style={{
-                            flexDirection: 'row',
-                            alignItems: 'center',
-                        }}>
-                        <Text style={{ fontSize: 18, fontWeight: 'bold' }}>{accountName}</Text>
-                        <Feather name='chevron-down'
-                            style={{
-                                fontSize: 20,
-                                color: '#000000',
-                                paddingHorizontal: 5,
-                                opacity: 0.5
-                            }} />
-                    </TouchableOpacity>
-                    <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                        <TouchableOpacity>
-                            <Feather name='plus-square'
-                                style={{ fontSize: 25, color: '#000000', paddingHorizontal: 15 }}
-                            />
-                        </TouchableOpacity>
-                        <TouchableOpacity>
-                            <Feather name='menu'
-                                style={{ fontSize: 25, color: '#000000', }}
-                            />
-                        </TouchableOpacity>
-                    </View>
-                </View>
-            </View>
-            ) : null}
-
+      <View>
+        {accountName ? (
+          <View>
             <View
+              style={{
+                flexDirection: "row",
+                alignItems: "center",
+                justifyContent: "space-between",
+              }}
+            >
+              <TouchableOpacity
                 style={{
-                    alignItems: 'center',
-                    justifyContent: 'space-around',
-                    flexDirection: 'row',
-                    paddingVertical: 20
-                }}>
-                <View style={{ alignItems: 'center' }}>
-                    <Image
-                        source={profileImage}
-                        style={{
-                            resizeMode: 'cover',
-                            width: 80,
-                            height: 80,
-                            borderRadius: 100
-                        }} />
-                    <Text style={{ paddingVertical: 5, fontWeight: 'bold' }}>{name}</Text>
-                </View>
-                <View style={{ alignItems: 'center' }}>
-                    <Text style={{ fontSize: 18, fontWeight: 'bold' }}>{post}</Text>
-                    <Text>Posts</Text>
-                </View>
-                <TouchableOpacity style={{ alignItems: 'center' }}>
-                    <Text style={{ fontSize: 18, fontWeight: 'bold' }}>{followers}</Text>
-                    <Text>followers</Text>
+                  flexDirection: "row",
+                  alignItems: "center",
+                }}
+              >
+                <Text style={{ fontSize: 18, fontWeight: "bold" }}>
+                  {accountName}
+                </Text>
+                <Feather
+                  name="chevron-down"
+                  style={{
+                    fontSize: 20,
+                    color: "#000000",
+                    paddingHorizontal: 5,
+                    opacity: 0.5,
+                  }}
+                />
+              </TouchableOpacity>
+              <View style={{ flexDirection: "row", alignItems: "center" }}>
+                <TouchableOpacity>
+                  <Feather
+                    name="plus-square"
+                    style={{
+                      fontSize: 25,
+                      color: "#000000",
+                      paddingHorizontal: 15,
+                    }}
+                  />
                 </TouchableOpacity>
-                <TouchableOpacity style={{ alignItems: 'center' }}>
-                    <Text style={{ fontSize: 18, fontWeight: 'bold' }}>{following}</Text>
-                    <Text>following</Text>
+                <TouchableOpacity>
+                  <Feather
+                    name="menu"
+                    style={{ fontSize: 25, color: "#000000" }}
+                  />
                 </TouchableOpacity>
+              </View>
             </View>
+          </View>
+        ) : null}
 
+        <View
+          style={{
+            alignItems: "center",
+            justifyContent: "space-around",
+            flexDirection: "row",
+            paddingVertical: 20,
+          }}
+        >
+          <View style={{ alignItems: "center" }}>
+            <Image
+              source={profileImage}
+              style={{
+                resizeMode: "cover",
+                width: 80,
+                height: 80,
+                borderRadius: 100,
+              }}
+            />
+            <Text style={{ paddingVertical: 5, fontWeight: "bold" }}>
+              {name}
+            </Text>
+          </View>
+          <View style={{ alignItems: "center" }}>
+            <Text style={{ fontSize: 18, fontWeight: "bold" }}>{post}</Text>
+            <Text>Posts</Text>
+          </View>
+          <TouchableOpacity style={{ alignItems: "center" }}>
+            <Text style={{ fontSize: 18, fontWeight: "bold" }}>
+              {followers}
+            </Text>
+            <Text>followers</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={{ alignItems: "center" }}>
+            <Text style={{ fontSize: 18, fontWeight: "bold" }}>
+              {following}
+            </Text>
+            <Text>following</Text>
+          </TouchableOpacity>
         </View>
-    )
+      </View>
+    );
 }
 
 export const ProfileButtons = ({ id, name, accountName, profileImage }) => {
