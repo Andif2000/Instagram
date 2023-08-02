@@ -1,8 +1,7 @@
-import { View, Text } from 'react-native'
-import React, { useState } from 'react'
-import { SwiperFlatList } from 'react-native-swiper-flatlist';
+import React, { useState } from "react";
+import { SwiperFlatList } from "react-native-swiper-flatlist";
 import { dataVideo } from "./DataBase";
-import SingleReels from './SingleReels';
+import SingleReels from "./SingleReels";
 
 const ReelsComponent = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -16,14 +15,11 @@ const ReelsComponent = () => {
       onChangeIndex={handlechangeIndexValue}
       vertical={true}
       renderItem={({ item, index }) => (
-        <SingleReels
-          item={item}
-          index={index}
-          currentIndex={currentIndex} />
+        <SingleReels item={item} index={index} currentIndex={currentIndex} />
       )}
-      keyExtractor={(item, index) => index }
+      keyExtractor={(item, index) => index}
     />
-  )
-}
+  );
+};
 
-export default ReelsComponent
+export default ReelsComponent;
