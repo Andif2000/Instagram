@@ -1,8 +1,7 @@
 import { View, Text, ScrollView, TouchableOpacity, Image } from 'react-native'
 import React, { useState } from 'react'
 import { useNavigation } from '@react-navigation/native'
-import AntDesign from 'react-native-vector-icons/AntDesign'
-
+import AntDesign from "react-native-vector-icons/AntDesign";
 import { dataFriendsProfile } from '../../Components/DataBase'
 
 const Activity = () => {
