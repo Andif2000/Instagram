@@ -1,6 +1,5 @@
 import { View, Text, StyleSheet, SafeAreaView, ScrollView, Image, Dimensions, TouchableOpacity, StatusBar } from 'react-native'
-import React, { useState } from 'react'
-
+import React, { useState } from "react";
 import TopBar from '../../Components/TopBar'
 import { Colors } from '../../Components/Colors'
 import InputCustom from '../../Components/InputCustom'
