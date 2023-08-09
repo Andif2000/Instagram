@@ -6,7 +6,6 @@ import InputCustom from '../../Components/InputCustom'
 import ButtonCustom from '../../Components/ButtonCustom'
 import ContainerImage from '../../Components/ContainerImage'
 
-
 const widthScreen = Dimensions.get('screen').width;
 const heightScreen = Dimensions.get('screen').height;
 
