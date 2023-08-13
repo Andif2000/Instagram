@@ -16,7 +16,6 @@ import SearchContent from "../../Components/SearchContent";
 
 const windowWidth = Dimensions.get("window").width;
 const windowHeight = Dimensions.get("window").height;
-
 const Search = () => {
   const [image, setImage] = useState(null);
 
