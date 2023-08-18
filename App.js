@@ -1,6 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { Image, StyleSheet, Text, View, Dimensions, TouchableOpacity } from 'react-native';
-import { NavigationContainer } from "@react-navigation/native";
+import { StyleSheet } from "react-native";
 import Route from './Src/Route';
 
 export default function App() {
